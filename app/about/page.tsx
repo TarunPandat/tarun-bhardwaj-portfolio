@@ -80,12 +80,12 @@ function About() {
                     />
                     <Capsule
                         label="LinkedIn"
-                        url="https://www.linkedin.com/in/tarun-bhardwaj-developer/"
+                        url="https://www.linkedin.com/in/tarun-bhardwaj-developer"
                         icon={<ImLinkedin />}
                     />
                     <Capsule
                         label="Email"
-                        url="mailto:tarun.bhardwaj.developer"
+                        url="mailto:tarun.bhardwaj.developer@gmail.com"
                         icon={<MdEmail />}
                     />
                 </div>
