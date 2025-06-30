@@ -16,7 +16,7 @@ import { getThemeFromCookie, setThemeInCookie } from '@/app/_utils/funs'
 import themes from '@/app/_constants/themes'
 
 function Header() {
-    const [theme, setTheme] = useState(getThemeFromCookie())
+    const [theme, setTheme] = useState(getThemeFromCookie() || themes.dark)
     const path = usePathname()
 
     const switchTheme = useCallback(() => {
