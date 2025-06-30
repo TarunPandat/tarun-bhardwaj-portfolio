@@ -26,7 +26,7 @@ const experience: WorkExperience[] = [
             ✅ Collaborated with cross-functional teams in Agile sprints
         `,
         designation: 'Software Engineer',
-        image: `${path}hytech.png`,
+        image: `${path}hytech1.png`,
         skills: [
             'React.js',
             'Next.js',
