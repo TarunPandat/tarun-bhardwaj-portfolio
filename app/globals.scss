@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@import './daisy.ui.css';
+
+
+
+form {
+  div {
+    @apply flex flex-col;
+    input {
+      outline: none;
+    }
+    input:focus {
+      border-color: var(--color-base-300);
+    }
+  }
+}
+
+.icon {
+  @apply w-4 h-4;
+}

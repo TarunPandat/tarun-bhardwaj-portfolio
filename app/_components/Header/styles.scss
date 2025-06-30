@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+.header {
+    @apply rounded-full py-1 px-3 border border-gray-400 shadow-2xl shadow-white fixed top-5 text-sm z-10;
+    transform: translateX(50%);
+    right: 50%;
+    background: var(--color-base-200);
+    
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 15;
+
+        li, .link{
+            @apply rounded-full px-1;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        li.active {
+            @apply bg-gray-400;
+        }
+        .divider {
+            @apply m-0;
+            height: 25;
+            width: 1px;
+            background: #fff;
+        }
+
+        .icon{
+            @apply w-4 h-4;
+        }
+    }
+
+
+}

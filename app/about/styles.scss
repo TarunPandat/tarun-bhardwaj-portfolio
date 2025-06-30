@@ -1,0 +1,17 @@
+.section-list {
+    position: relative;
+    li {
+        margin: 20px 0;
+        cursor: pointer;
+    }
+    li::before {
+        content: '\00a0';
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        display: inline-flex;
+        top: 12px;
+        right: 5px;
+        position: relative;
+    }
+}

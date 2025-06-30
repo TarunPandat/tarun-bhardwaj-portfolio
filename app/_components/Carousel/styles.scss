@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+.indicator-wrapper  {
+    @apply flex w-full md:w-10/12 gap-1;
+
+    .indicator {
+        @apply h-[3px] bg-gray-500 rounded-full flex-1;
+    }
+}
