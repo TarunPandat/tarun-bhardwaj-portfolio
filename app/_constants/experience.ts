@@ -61,7 +61,7 @@ const experience: WorkExperience[] = [
             Contributed to continuous improvement by proposing enhancements in system design and team workflows.
         `,
         designation: 'Associate Application Consultant',
-        image: `${path}vizlogic.png`,
+        image: `${path}vizLogic.png`,
         skills: [
             'Payment Gateways',
             'Git BASH',
