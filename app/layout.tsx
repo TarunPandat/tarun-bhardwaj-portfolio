@@ -23,7 +23,11 @@ export default async function RootLayout({
     const theme = cookieStore.get('theme')
 
     return (
-        <html lang="en" data-theme={theme || themes.dark} className="h-full">
+        <html
+            lang="en"
+            data-theme={theme?.value || themes.dark}
+            className="h-full"
+        >
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased h-full `}
             >
