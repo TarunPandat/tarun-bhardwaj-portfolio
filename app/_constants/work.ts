@@ -1,4 +1,3 @@
-import { Slide } from '../_components/Carousel'
 
 export interface WorkTypes {
     projectName: string

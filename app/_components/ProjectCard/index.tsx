@@ -4,10 +4,6 @@ import { WorkTypes } from '@/app/_constants/work'
 import Link from 'next/link'
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
 
-interface props {
-    title?: boolean
-}
-
 function ProjectCard(proj: WorkTypes) {
     return (
         <div className="flex my-10 flex-col">

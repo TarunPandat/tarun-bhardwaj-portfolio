@@ -153,7 +153,11 @@ function About() {
                                 className="inline-flex flex-col border border-gray-500 rounded-xl p-3 m-2"
                             >
                                 <div className="flex w-full item-center">
-                                    {skill.icon && <skill.icon size={50} />}
+                                    {skill.icon && (
+                                        typeof skill.icon === 'function' ?
+                                            React.createElement(skill.icon as React.ComponentType<{ size: number }>, { size: 50 }) :
+                                            skill.icon
+                                    )}
                                 </div>
                                 <p className="text-xl font-bold">
                                     {skill.name}

@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@use 'tailwindcss';
 
 .indicator-wrapper  {
     @apply flex w-full md:w-10/12 gap-1;

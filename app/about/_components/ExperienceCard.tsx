@@ -6,7 +6,6 @@ function ExperienceCard({
     companyName,
     from,
     to,
-    projects,
     present,
     description,
     designation,
@@ -29,7 +28,7 @@ function ExperienceCard({
             </div>
             {image && (
                 <div className="flex w-full mt-5">
-                    <img src={image} className="w-[250px] h-auto" />
+                    <img src={image} alt={companyName} className="w-[250px] h-auto" />
                 </div>
             )}
             <div className="flex w-full mt-5 gap-3 !flex-wrap">

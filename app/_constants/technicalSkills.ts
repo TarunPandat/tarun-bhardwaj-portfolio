@@ -23,7 +23,7 @@ import { VscAzureDevops } from 'react-icons/vsc'
 
 export interface Skill {
     name: string
-    icon?: React.JSX.Element | React.ReactNode | any
+    icon?: React.ComponentType | React.ReactNode
     exp: number
 }
 

@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@use 'tailwindcss';
 
 .button {
     @apply flex flex-row rounded-full border border-gray-400 items-center gap-5 cursor-pointer;

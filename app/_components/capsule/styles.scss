@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@use 'tailwindcss';
 
 .capsule {
     @apply inline-flex flex-row px-2 gap-1 border border-white rounded-full items-center w-auto text-sm whitespace-nowrap;

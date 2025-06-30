@@ -4,12 +4,12 @@ import { Metadata } from 'next'
 import React from 'react'
 
 type Props = {
-    params: { blog: string }
+    params: Promise<{ blog: string }>
 }
 
 // 🧠 Set meta title dynamically
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { blog } = params
+    const { blog } = await params
 
     return {
         title: `${blog.replace(/-/g, ' ')} | Blog`,

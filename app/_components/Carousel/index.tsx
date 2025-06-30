@@ -64,6 +64,7 @@ function MyCarousel({
                     >
                         <img
                             src={slide.img}
+                            alt={slide.label || `Slide ${_ + 1}`}
                             className={`${
                                 mobile
                                     ? `h-[500px] w-auto px-2`

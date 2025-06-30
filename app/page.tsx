@@ -1,7 +1,6 @@
 import React from 'react'
 import Button from './_components/button'
 import work from './_constants/work'
-import Link from 'next/link'
 import blogs from './_constants/blogs'
 import ProjectCard from './_components/ProjectCard'
 import BlogCard from './_components/BlogCard'
@@ -24,7 +23,7 @@ function Home() {
                     Bringing ideas to life through code and design
                 </h1>
                 <p className="mt-10 text-md text-gray-400 md:w-8/12">
-                    I'm Tarun, a full-stack developer building scalable web and
+                    I&apos;m Tarun, a full-stack developer building scalable web and
                     mobile apps with React, Node.js, and Next.js. I lead
                     product-driven projects by day — and craft my own ideas
                     after hours.
