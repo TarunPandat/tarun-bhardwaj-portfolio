@@ -12,7 +12,7 @@ function BlogComp({ title, date, image }: Blog) {
                     className="w-full h-auto rounded-2xl"
                 />
             </div>
-            <div className="flex w-full flex-col mx-10">
+            <div className="flex w-full flex-col sm:mx-10">
                 <p className="text-xl font-bold my-5">{title}</p>
                 <div className="flex w-full">
                     <p className="text-sm text-gray-500 mb-5 items-center">

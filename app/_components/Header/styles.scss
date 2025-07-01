@@ -1,7 +1,7 @@
 @use 'tailwindcss';
 
 .header {
-    @apply rounded-full py-1 px-3 border border-gray-400 shadow-2xl shadow-white fixed top-5 text-sm z-10;
+    @apply rounded-full py-1 px-3 border border-gray-400 shadow-2xl shadow-white fixed top-5 text-sm z-10 max-sm:max-w-2xs;
     transform: translateX(50%);
     right: 50%;
     background: var(--color-base-200);
@@ -9,10 +9,10 @@
     ul {
         display: flex;
         flex-direction: row;
-        gap: 15;
+        @apply  gap-1 sm:gap-3.5;
 
         li, .link{
-            @apply rounded-full px-1;
+            @apply rounded-full px-0.5 sm:px-1;
             display: inline-flex;
             align-items: center;
             text-decoration: none;

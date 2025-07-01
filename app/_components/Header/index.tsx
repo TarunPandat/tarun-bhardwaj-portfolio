@@ -48,18 +48,18 @@ function Header() {
                 <div className="divider"></div>
                 <li className={`${isActive('/about')}`}>
                     <Link className="link" href="/about">
-                        <UserCircleIcon className="icon mx-2" /> About
+                        <UserCircleIcon className="icon mr-0.5 sm:mr-2" /> About
                     </Link>
                 </li>
                 <li className={`${isActive('/work')}`}>
                     <Link className="link" href="/work">
-                        <Squares2X2Icon className="icon mx-2" />
+                        <Squares2X2Icon className="icon mr-0.5 sm:mr-2" />
                         Work
                     </Link>
                 </li>
                 <li className={`${isActive('/blogs')}`}>
-                    <Link className="link mr-2" href="/blogs">
-                        <BookmarkSquareIcon className="icon mx-2" />
+                    <Link className="link" href="/blogs">
+                        <BookmarkSquareIcon className="icon mr-0.5 sm:mr-2" />
                         Blog
                     </Link>
                 </li>

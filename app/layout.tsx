@@ -32,7 +32,7 @@ export default async function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased h-full `}
             >
                 <Header />
-                <div className="container mx-auto mt-40">{children}</div>
+                <div className="container mx-auto mt-40 px-2.5">{children}</div>
             </body>
         </html>
     )

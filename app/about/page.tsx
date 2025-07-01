@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 
 function About() {
     return (
-        <div className="flex w-full flex-col md:flex-row flex-wrap">
-            <div className="flex w-full md:w-2/5 items-center flex-col">
+        <div className="flex w-full flex-col md:flex-row flex-wrap gap-2.5">
+            <div className="flex w-full flex-1 items-center flex-col">
                 <Avatar
                     image="/assets/images/pp.png"
                     alt="Tarun Bhardwaj"
@@ -72,14 +72,16 @@ function About() {
                     </ul>
                 </div>
             </div>
-            <div className="flex w-full md:w-3/5 flex-col">
+            <div className="flex w-full flex-2 flex-col">
                 <div className="flex mt-20 flex-col" id="intro">
-                    <h1 className="text-8xl font-bold">Tarun Bhardwaj</h1>
-                    <p className="text-4xl text-gray-500">
+                    <h1 className="text-4xl sm:text-8xl font-bold">
+                        Tarun Bhardwaj
+                    </h1>
+                    <p className="text-2xl sm:text-4xl text-gray-500">
                         Full-Stack Software Engineer
                     </p>
                 </div>
-                <div className="inline-flex gap-2 w-full mt-10">
+                <div className="inline-flex gap-2 w-full mt-10 flex-wrap">
                     <Capsule
                         target="_blank"
                         label="GitHub"

@@ -14,7 +14,9 @@ function ProjectCard(proj: WorkTypes) {
             />
             <div className="flex mt-5 flex-wrap gap-10">
                 <div className="flex w-full md:flex-1">
-                    <p className="text-4xl font-bold">{proj.title}</p>
+                    <p className="text-3xl sm:text-4xl font-bold">
+                        {proj.title}
+                    </p>
                 </div>
                 <div className="flex w-full md:flex-1 flex-col">
                     <p className="text-xl text-gray-500">{proj.thoughts}</p>
