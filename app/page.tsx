@@ -41,7 +41,7 @@ function Home() {
                     About me
                 </Button>
                 <Capsule
-                    className="max-h-full h-[50px] !w-[200px] justify-around"
+                    className="max-h-full h-[50px] !w-[200px] justify-around !border-gray-400"
                     download
                     label="Download Resume"
                     url="/assets/docs/Tarun-Bhardwaj-CV.pdf"
