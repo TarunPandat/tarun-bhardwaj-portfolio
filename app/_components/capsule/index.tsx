@@ -10,14 +10,22 @@ interface CapsuleProps extends LinkNoHref {
     url?: string
     download?: string | boolean
     target?: React.HTMLAttributeAnchorTarget
+    className?: string
 }
 
-function Capsule({ label, icon, download, url, ...linkProps }: CapsuleProps) {
+function Capsule({
+    label,
+    icon,
+    download,
+    url,
+    className,
+    ...linkProps
+}: CapsuleProps) {
     if (url) {
         if (download) {
             return (
                 <a {...linkProps} href={url} download={download}>
-                    <div className="capsule">
+                    <div className={`capsule ${className}`}>
                         {icon} {label}
                     </div>
                 </a>
@@ -26,7 +34,7 @@ function Capsule({ label, icon, download, url, ...linkProps }: CapsuleProps) {
 
         return (
             <Link {...linkProps} href={url}>
-                <div className="capsule">
+                <div className={`capsule ${className}`}>
                     {icon} {label}
                 </div>
             </Link>
@@ -34,7 +42,7 @@ function Capsule({ label, icon, download, url, ...linkProps }: CapsuleProps) {
     }
 
     return (
-        <div className="capsule cursor-pointer">
+        <div className={`capsule cursor-pointer ${className}`}>
             {icon} {label}
         </div>
     )

@@ -5,6 +5,8 @@ import blogs from './_constants/blogs'
 import ProjectCard from './_components/ProjectCard'
 import BlogCard from './_components/BlogCard'
 import { Metadata } from 'next'
+import { ArrowDownTrayIcon } from '@heroicons/react/24/outline'
+import Capsule from './_components/capsule'
 
 const latestProject = work[0]
 
@@ -23,13 +25,13 @@ function Home() {
                     Bringing ideas to life through code and design
                 </h1>
                 <p className="mt-10 text-md text-gray-400 md:w-8/12">
-                    I&apos;m Tarun, a full-stack developer building scalable web and
-                    mobile apps with React, Node.js, and Next.js. I lead
+                    I&apos;m Tarun, a full-stack developer building scalable web
+                    and mobile apps with React, Node.js, and Next.js. I lead
                     product-driven projects by day — and craft my own ideas
                     after hours.
                 </p>
             </div>
-            <div className="flex my-10">
+            <div className="flex my-10 flex-wrap gap-10">
                 <Button
                     image="/assets/images/pp.png"
                     alt="Tarun Bhardwaj"
@@ -38,6 +40,13 @@ function Home() {
                 >
                     About me
                 </Button>
+                <Capsule
+                    className="max-h-full h-[50px] !w-[200px] justify-around"
+                    download
+                    label="Download Resume"
+                    url="/assets/docs/Tarun-Bhardwaj-CV.pdf"
+                    icon={<ArrowDownTrayIcon className="icon" />}
+                />
             </div>
             <ProjectCard {...latestProject} />
             <div className="flex my-10">
