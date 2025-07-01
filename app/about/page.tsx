@@ -1,6 +1,7 @@
 import React from 'react'
 import Avatar from '../_components/avatar'
 import {
+    ArrowRightIcon,
     GlobeAltIcon,
     GlobeAsiaAustraliaIcon,
 } from '@heroicons/react/24/outline'
@@ -16,6 +17,9 @@ import skills from '../_constants/technicalSkills'
 import './styles.scss'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import { ArrowDownTrayIcon } from '@heroicons/react/24/outline'
+import certificates from '../_constants/certificates'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
     title: 'About - Tarun Bhardwaj',
@@ -50,18 +54,21 @@ function About() {
                 </div>
                 <div className="flex w-full mt-10 justify-center">
                     <ul className="section-list">
-                        <Link href="#intro">
-                            <li>Introduction</li>
-                        </Link>
-                        <Link href="#work">
-                            <li>Work Experience</li>
-                        </Link>
-                        <Link href="#studies">
-                            <li>Studies</li>
-                        </Link>
-                        <Link href="#skills">
-                            <li>Technical skills</li>
-                        </Link>
+                        <li>
+                            <Link href="#intro">Introduction</Link>
+                        </li>
+                        <li>
+                            <Link href="#work">Work Experience</Link>
+                        </li>
+                        <li>
+                            <Link href="#studies">Studies</Link>
+                        </li>
+                        <li>
+                            <Link href="#skills">Technical skills</Link>
+                        </li>
+                        <li>
+                            <Link href="#certificates">Certificates</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -74,19 +81,28 @@ function About() {
                 </div>
                 <div className="inline-flex gap-2 w-full mt-10">
                     <Capsule
+                        target="_blank"
                         label="GitHub"
                         url="https://github.com/TarunPandat"
                         icon={<FaGithub />}
                     />
                     <Capsule
+                        target="_blank"
                         label="LinkedIn"
                         url="https://www.linkedin.com/in/tarun-bhardwaj-developer"
                         icon={<ImLinkedin />}
                     />
                     <Capsule
+                        target="_blank"
                         label="Email"
                         url="mailto:tarun.bhardwaj.developer@gmail.com"
                         icon={<MdEmail />}
+                    />
+                    <Capsule
+                        download
+                        label="Resume"
+                        url="/assets/docs/Tarun-Bhardwaj-CV.pdf"
+                        icon={<ArrowDownTrayIcon className="icon" />}
                     />
                 </div>
                 <div className="flex mt-10">
@@ -169,6 +185,66 @@ function About() {
                                 <p className="text-sm text-gray-400">
                                     Exp: {skill.exp}
                                 </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="flex flex-col mt-10" id="certificates">
+                    <p className="text-3xl font-bold">Certificates</p>
+
+                    <div className="flex mt-5 mb-20 flex-col gap-5">
+                        {certificates.map((cert, _) => (
+                            <div key={cert.title + cert.issuedOn}>
+                                <div className="flex w-full flex-col">
+                                    <div className="flex w-full justify-between mb-2">
+                                        <p className="text-xl font-bold">
+                                            {cert.title}
+                                        </p>
+                                        <p className="text-sm text-gray-400">
+                                            {cert.provider}
+                                        </p>
+                                    </div>
+                                    <div className="flex w-full justify-between">
+                                        <div className="flex flex-col justify-between">
+                                            <p className="text-sm">
+                                                Issued on {cert.issuedOn}
+                                            </p>
+                                            {cert.code && (
+                                                <p className="text-sm">
+                                                    Certification code{' '}
+                                                    {cert.code}
+                                                </p>
+                                            )}
+                                            {cert?.url && (
+                                                <Link
+                                                    href={cert.url}
+                                                    target="_blank"
+                                                    className="text-blue-400 text-md inline-flex items-center"
+                                                >
+                                                    Checkout{' '}
+                                                    <ArrowRightIcon className="icon ml-2" />
+                                                </Link>
+                                            )}
+                                        </div>
+                                        {cert.image && (
+                                            <Link
+                                                href={cert.image}
+                                                target="_blank"
+                                            >
+                                                <Image
+                                                    src={cert.image}
+                                                    width={200}
+                                                    height={150}
+                                                    alt={cert.title}
+                                                    className="rounded-lg"
+                                                />
+                                            </Link>
+                                        )}
+                                    </div>
+                                </div>
+                                {_ < certificates.length - 1 && (
+                                    <div className="divider divider-secondary" />
+                                )}
                             </div>
                         ))}
                     </div>

@@ -28,12 +28,16 @@ function ExperienceCard({
             </div>
             {image && (
                 <div className="flex w-full mt-5">
-                    <img src={image} alt={companyName} className="w-[250px] h-auto" />
+                    <img
+                        src={image}
+                        alt={companyName}
+                        className="w-[250px] h-auto"
+                    />
                 </div>
             )}
             <div className="flex w-full mt-5 gap-3 !flex-wrap">
                 {skills?.map((skill) => (
-                    <Capsule key={skill} label={skill} url="" />
+                    <Capsule key={skill} label={skill} />
                 ))}
             </div>
         </div>
