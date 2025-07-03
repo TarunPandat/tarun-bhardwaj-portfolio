@@ -7,6 +7,15 @@ type Props = {
     params: Promise<{ blog: string }>
 }
 
+export async function generateStaticParams() {
+  // Example slugs to pre-render
+  return [
+    { blog: 'first-post' },
+    { blog: 'second-post' },
+  ];
+}
+
+
 // 🧠 Set meta title dynamically
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { blog } = await params
