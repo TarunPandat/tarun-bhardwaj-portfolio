@@ -1,0 +1,29 @@
+@use 'tailwindcss';
+
+.html {
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    ul {
+      margin-top: 0;
+      list-style-type: circle;
+    }
+
+    h2 {
+        @apply text-2xl font-bold;
+    }
+    h3 {
+        @apply text-xl font-bold;
+    }
+    
+}

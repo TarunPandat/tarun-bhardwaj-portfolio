@@ -5,7 +5,7 @@ import BlogComp from '../_components/Blog'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-const [latestBlogs, ...restBlogs] = blogs.reverse()
+const [latestBlogs, ...restBlogs] = blogs
 
 export const metadata: Metadata = {
     title: 'Blogs - Tarun Bhardwaj',
