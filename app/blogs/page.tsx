@@ -5,14 +5,14 @@ import BlogComp from '../_components/Blog'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-const [latestBlogs, ...restBlogs] = blogs
-
 export const metadata: Metadata = {
     title: 'Blogs - Tarun Bhardwaj',
     description: 'Blogs - Tarun Bhardwaj Portfolio',
 }
 
 function Blogs() {
+    const [latestBlogs, ...restBlogs] = blogs
+
     return (
         <div className="flex w-full flex-col">
             <div className="flex w-full flex-col items-center">

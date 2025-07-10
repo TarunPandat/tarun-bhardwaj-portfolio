@@ -11,6 +11,98 @@ const path = '/assets/images/blogs/'
 
 const blogs: Blog[] = [
     {
+        title: `Why Next.js 15 Feels Like a Game-Changer for Developers Like Me`,
+        content: `
+
+<p>
+Throughout my development journey, I’ve worked with multiple versions of Next.js—and I have to say, version 15 and its latest improvements are on another level.
+It’s not just about performance anymore; it’s about the experience, the control, and the flexibility that this framework gives you, especially when working on complex, modern applications.
+</p>
+
+<p>Here’s my take on the most impactful features introduced from <strong>Next.js 15 onward</strong> and why they actually matter in real-world development.</p>
+
+<h3>🧠 React 19 Support — Native & Smooth</h3>
+<p>
+If you’ve started experimenting with <strong>React 19</strong>, Next.js 15 now supports it out of the box. I’m talking about the new <code>useFormStatus</code>,
+<code>useOptimistic</code>, and <code>useActionState</code> hooks being usable in both the <strong>App Router and Pages Router</strong>.
+</p>
+<p>
+Earlier, we had to wait for framework-level support. But this time, the Next.js team is ahead, and I could use React 19 features in my existing projects without rewriting major parts of the code.
+</p>
+
+<h3>⚡ Turbopack by Default — It's Seriously Fast</h3>
+<p>
+Let’s be honest—we’ve all complained about build speeds. The moment I switched to Turbopack (Next.js 15+ uses it by default for dev), my local dev server booted up way faster than before.
+</p>
+<p>It’s built with Rust, and you can literally feel the difference when hot-reloading and making changes.</p>
+
+<h3>⚠️ Async APIs – Small Change, Big Impact</h3>
+<p>This one <strong>caught me off guard</strong> at first. In Next.js 15, APIs like <code>cookies()</code> and <code>headers()</code> now <strong>must</strong> be awaited. So:</p>
+
+<pre><code>// Old
+const cookies = cookies();
+
+// New
+const cookies = await cookies();
+</code></pre>
+
+<br/>
+<p>
+Yeah, it's a breaking change, but it makes sense. Everything's moving toward async by default, especially for server-side logic. I had to refactor a bit, but after using the <code>@next/codemod</code> tool, it was smooth.
+</p>
+
+<h3>🔄 Caching is Now Opt-In (Not Auto)</h3>
+<p>
+This was a smart move. In earlier versions, Next.js cached a lot of things by default. But now, from v15, <strong>you have to explicitly cache</strong>.
+This gives more control, which I love—especially when working with frequently updated data like dashboards.
+</p>
+<p>Use <code>force-cache</code>, <code>no-store</code>, or the dynamic/static directives to control how your routes behave.</p>
+
+<h3>🆕 Server Actions are Finally Stable</h3>
+<p>
+I’ve been avoiding Server Actions when they were experimental, but now they’re stable—and trust me, they simplify a lot.
+You can basically write backend code <em>inside your components</em>. No need to jump between API routes and UI logic.
+</p>
+<p>It’s a cleaner, more maintainable way to handle form submissions, mutations, and more.</p>
+
+<h3>🧪 Partial Prerendering (Experimental, But Cool)</h3>
+<p>
+Partial Prerendering is like the best of both worlds: your layout is static, but the data is dynamic.
+Think of it like this—your app feels fast because the UI loads instantly, while the live data streams in.
+If you’re building a SaaS dashboard or e-commerce app, this will make a difference.
+</p>
+
+<h3>✨ Other Changes I Liked</h3>
+<ul>
+  <li>✅ Visual route indicators in dev mode (very helpful).</li>
+  <li>✅ Enhanced <code>&lt;Form&gt;</code> components with better UX.</li>
+  <li>✅ TypeScript support in <code>next.config.ts</code> (finally).</li>
+  <li>✅ React Compiler (optional, but helps with performance).</li>
+  <li>✅ Better error handling and stack traces during build.</li>
+</ul>
+<br/><br/>
+<h3>My Verdict</h3>
+<p>
+Next.js 15 isn’t just a version bump. It’s a real upgrade in terms of developer ergonomics, performance, and flexibility.
+If you're maintaining large projects or planning new ones, <strong>this is a good point to migrate</strong>—especially because the codemods can automate most of the upgrade work.
+</p>
+<p>
+I'm already using v15+ on a couple of internal tools and honestly? It's saving me time every day.
+</p>
+
+<p>
+If you’ve upgraded or are planning to, I’d love to hear how it’s going for you. Let’s swap experiences.
+</p>
+
+<p>And if you're still using an older version of Next.js—maybe it’s time to give v15 a shot.</p>
+
+`,
+        slug: `nextjs-15`,
+        date: `10 July, 2025`,
+        image: `${path}next-15.png`,
+        isHtml: true,
+    },
+    {
         title: `Next.js vs Angular – Which One to Choose and When?`,
         content: `
   <h2>Angular vs Next.js: My Real-World Perspective</h2>

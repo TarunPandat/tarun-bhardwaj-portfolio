@@ -22,10 +22,9 @@
             @apply bg-gray-400;
         }
         .divider {
-            @apply m-0;
+            @apply m-0 bg-gray-400;
             height: 25;
             width: 1px;
-            background: #fff;
         }
 
         .icon{
